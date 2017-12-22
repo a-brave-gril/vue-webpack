@@ -1,6 +1,7 @@
 #项目简介
-	1、这个项目主要是模仿移动端购物车的，用到了JS的逻辑是用VUE写的，样式用的SASS，最后由webpack打包完成。
+	1. 这个项目主要是模仿移动端购物车的，用到了JS的逻辑是用VUE写的，样式用的SASS，最后由webpack打包完成。
 #项目目录介绍
+```
 	+dist       //打包后的文件，即生产环境
 		+img
 		+bundle.js     
@@ -27,3 +28,4 @@
 	+package.json 
 	+README.md
 	+webpack.config.js
+```
