@@ -1,0 +1,155 @@
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 50px;
+  }
+}
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 56.25px;
+  }
+}
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 58.59375px;
+  }
+}
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 62.5px;
+  }
+}
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 64.6875px;
+  }
+}
+@media screen and (min-width: 440px) {
+  html {
+    font-size: 68.75px;
+  }
+}
+@media screen and (min-width: 480px) {
+  html {
+    font-size: 75px;
+  }
+}
+@media screen and (min-width: 520px) {
+  html {
+    font-size: 81.25px;
+  }
+}
+@media screen and (min-width: 560px) {
+  html {
+    font-size: 81.25px;
+  }
+}
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 81.25px;
+  }
+}
+@media screen and (min-width: 640px) {
+  html {
+    font-size: 81.25px;
+  }
+}
+.clearfix:after, .clearfix:before {
+  content: "";
+  display: inline-block;
+  clear: both;
+}
+
+.r-left {
+  float: left;
+}
+
+.r-right {
+  float: right;
+}
+
+.dis-block {
+  display: block;
+}
+
+.dis-in-block {
+  display: inline-block;
+}
+
+.dis-in {
+  display: inline;
+}
+
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+body, button, input, select, textarea {
+  font: 12px/1.5tahoma, arial, \5b8b\4f53;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+address, cite, dfn, em, var {
+  font-style: normal;
+}
+
+code, kbd, pre, samp {
+  font-family: couriernew, courier, monospace;
+}
+
+small {
+  font-size: 12px;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+legend {
+  color: #000;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+button, input, select, textarea {
+  font-size: 100%;
+}
+
+.layout {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #eee;
+}
+.layout .wrap {
+  width: 100%;
+}
+
+.btn-default {
+  display: inline-block;
+  width: 50%;
+  height: 1rem;
+  text-align: center;
+  color: #fff;
+  background: #86c6cd;
+}

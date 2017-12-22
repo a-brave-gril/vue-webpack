@@ -1,0 +1,10 @@
+@mixin circle{
+	display: block;
+	width: .3rem;
+	float: left;
+	padding-right: .05rem;
+	img{
+		width: 100%;
+		display: block;
+	}
+}

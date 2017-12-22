@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>购物车</title>
+  	<meta charset="utf-8">
+	<meta name="author" content="a-brave-gril"> <!-- 作者 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK"> <!-- 表示描述文档类型? -->
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- 删除默认的苹果工具栏和菜单栏。 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- 控制状态栏显示样式 -->
+    <meta name="format-detection" content="telephone=no"> <!-- 手机号码不被显示为拨号链接 -->
+    <meta http-equiv="Expires" content="-1"> 
+    <!-- 用于设定网页的到期时间，过期则必须到服务器上重新调用 content="-1"，网页在任何时候都不能被Cache存储 -->
+    <meta http-equiv="Cache-Control" content="no-cache"> 
+    <meta http-equiv="Pragma" content="no-cache">
+  	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+	<!--S 布局 -->
+	<div class="layout" v-cloak>
+		<div class="wrap clearfix">
+			<!-- S 头部 -->
+			<div class="top clearfix">
+				<div class="title">
+					购物车（{{mun_length}}）
+				</div>
+			</div>
+			<!-- S 购物车列表 -->
+			<div class="content clearfix">
+				<div class="list">
+				    <div class="list-one" v-for="(item,index) in show_list">
+				    	<div class="list-title">
+							<div class="title-left r-left">
+								<div class="choose r-left" @click="singleElect(item)"><img v-bind:src="item.choose_pic" alt=""></div>
+								<div class="r-left">
+									<div class="icon glyphicon glyphicon-shopping-cart r-left"></div>
+									<div class="shopname r-left dis-block">{{item.storeName}}&nbsp;&gt;</div>
+								</div>
+							</div>
+							<div class="title-right r-right" @click="edit(item)" >
+								{{ item.isShow ? "完成" : "编辑"}}
+							</div>
+						</div>
+						<div class="list-content clearfix">
+							<div class="c-left r-left clearfix">
+								<div class="choose r-left" @click="singleElect(item)"><img v-bind:src="item.choose_pic" alt=""></div>
+							</div>
+							<div class="c-right r-left clearfix">
+								<div class="r-content clearfix">
+									<div class="shop-img r-left">
+										<img v-bind:src="item.picUrls" alt="">
+									</div>
+									<div class="r-left con-left" v-if="!item.isShow">
+										<div class="title">
+											{{item.title}}
+										</div>
+										<div class="sku">
+											{{item.sku}}
+										</div>
+										<div class="price">
+										 	<div class="r-left">
+										 		<span class="pre-price">￥{{item.minPrice}}</span>
+												<span class="ori-price">￥199.00</span>
+										 	</div>
+											<div class="r-right">
+												x{{item.munber}}
+											</div>
+										</div>
+									</div>
+									<div class="list-edit" v-if="item.isShow">
+										<div class="left r-left">
+											<span @click="reduce(item)">-</span>
+											<input class="num" type="number" @change="updateNum(item,index)" v-bind:value="item.munber">
+											<span @click="add(item)">+</span>
+										</div>
+										<div class="right r-left">
+											<div class="btn" @click="deleteItem(item)">删除</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+				    </div>
+				</div>
+			</div>
+			<!-- 尾部 -->
+			<div class="bottom">
+				<div class="b-bottom clearfix">
+					<div class="b-left r-left">
+						<div class="choose" @click="generalElect()"><img v-bind:src="choose_pic" alt=""></div>
+						<span>全选</span>
+					</div>
+					<div class="b-right r-right">
+						<span>合计：{{count}}</span>
+						<span class="btn-default">结算</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--E 布局 -->
+  	<script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>
